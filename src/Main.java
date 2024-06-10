@@ -126,12 +126,12 @@ public class Main {
 
     private static void task9() {
         int deposit = 29_000;
-        double incomePercent = 0, sum = 0;
+        double incomePercent, sum = 0;
         float percent = 0.01f;
         for (int i = 0; i < 12; i++) {
-            incomePercent += sum * percent;
+            incomePercent = sum * percent;
             sum += deposit + incomePercent;
-            System.out.printf("В конце месяца %2d, сумма накопленных процентов - %,9.2f рублей, сумма накоплений - %,10.2f рублей%n", i + 1, incomePercent, sum);
+            System.out.printf("В конце месяца %2d, сумма процентов за месяц - %,9.2f рублей, сумма накоплений - %,10.2f рублей%n", i + 1, incomePercent, sum);
         }
         System.out.println();
     }
